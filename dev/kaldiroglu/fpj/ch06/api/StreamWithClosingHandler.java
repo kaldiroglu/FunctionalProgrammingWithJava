@@ -25,5 +25,8 @@ public class StreamWithClosingHandler {
 
 		if (sequentialStream == sequentialStreamWithHandler2)
 			System.out.println("The same");
+
+		System.out.println(sequentialStream.isParallel());
+
 	}
 }

@@ -3,7 +3,7 @@ package dev.kaldiroglu.fpj.ch02.lambda;
 public class LambdaVariations2 {
 
 	public static void main(String[] args) {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 1; i++) {
 			BinaryDoubleChecker checker = binaryDoubleCheckerFactory();
 			binaryDoubleCheckerExecutor(checker, 10.22, 7.81);
 		}
@@ -14,7 +14,10 @@ public class LambdaVariations2 {
 		BinaryDoubleChecker contradiction = (d1, d2) -> false;
 
 		BinaryDoubleChecker equalityChecker = (d1, d2) -> d1 == d2;
-		BinaryDoubleChecker firstArgumentGreaterChecker = (d1, d2) -> d1 > d2;
+//		BinaryDoubleChecker firstArgumentGreaterChecker = (d1, d2) -> d1 > d2;
+		BinaryDoubleChecker firstArgumentGreaterChecker = (d1, d2) -> {
+			System.out.println("d1: " + d1 + " d2: " + d2);
+			return d1 > d2;};
 		BinaryDoubleChecker secondArgumentGreaterChecker = (d1, d2) -> d1 < d2;
 
 		BinaryDoubleChecker checker = null;
@@ -59,6 +62,10 @@ public class LambdaVariations2 {
 
 @FunctionalInterface
 interface BinaryDoubleChecker {
+//	default void f(){
+//
+//	}
 
+//	void g();
 	public boolean check(double d1, double d2);
 }

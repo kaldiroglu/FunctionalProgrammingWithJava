@@ -23,7 +23,7 @@ public class LambdaScope {
 //			System.out.println(m);   // Cannot be resolved to a variable.
 			int m = 10;	// This is not a shadowing!
 			int k = m;
-			
+//			i++;
 			k += i;
 			k += ls.i;
 			ls.i++;
@@ -41,7 +41,8 @@ public class LambdaScope {
 		
 		ScopeInterface si2 = (ii, ss) -> {
 //			int z = this.i;
-			//System.out.println(m);
+//			System.out.println(m);
+			System.out.println(ScopeInterface.m);
 			int m = 10;	// This is not a shadowing!
 			int k = m;
 			

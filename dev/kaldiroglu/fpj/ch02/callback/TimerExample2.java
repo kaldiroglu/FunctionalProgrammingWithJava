@@ -59,7 +59,7 @@ public class TimerExample2 {
 				System.out.println("Selam :)");
 			}
 		});
-		t5.start();
+//		t5.start();
 		
 //		t3.start();
 //		
@@ -68,7 +68,15 @@ public class TimerExample2 {
 //			System.out.println("At the tone, the time is " + now);
 //			Toolkit.getDefaultToolkit().beep();	
 //		});
-//		
+//
+
+		Timer t6 = new Timer(1000, new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Naber abicim?");
+			}
+		});
+
+		t6.start();
 		
 		JOptionPane.showMessageDialog(null, "Quit program?");
 		System.exit(0);

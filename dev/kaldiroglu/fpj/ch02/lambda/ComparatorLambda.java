@@ -1,4 +1,4 @@
-package dev.kaldiroglu.fpj.ch03.other;
+package dev.kaldiroglu.fpj.ch02.lambda;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,7 +27,7 @@ public class ComparatorLambda {
 		for(String s : names)
 			System.out.println(s);
 		
-		System.out.println("\nAfter sorting alphabetically by a lambda expression.");
+		System.out.println("\nAfter sorting alphabetically in reverse by a lambda expression.");
 		Comparator<String> comparator1 = (s1, s2) -> s1.compareTo(s2);
 		Collections.sort(names, comparator1.reversed());
 		for(String s : names)

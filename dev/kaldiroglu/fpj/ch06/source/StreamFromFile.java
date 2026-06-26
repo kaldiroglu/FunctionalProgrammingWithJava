@@ -11,8 +11,8 @@ public class StreamFromFile {
 	private static String path = "dev/kaldiroglu/fpj/ch06/source/FirstMemory.txt";
 
 	public static void main(String[] args) {
-		streamOutOfFile();
-//		streamWithHandlerOutOfFile();
+//		streamOutOfFile();
+		streamWithHandlerOutOfFile();
 	}
 
 	public static void streamOutOfFile() {
@@ -65,8 +65,8 @@ public class StreamFromFile {
 		try (BufferedReader br = new BufferedReader(
 				new FileReader(path));
 				Stream<String> fileLines = br.lines()) {
-			Stream<String> newFileLines = fileLines.onClose(() -> System.out.println("Handler on fileLines"));
-//			fileLines.forEach(element -> System.out.printf("%s\n", element));
+			Stream<String> newFileLines = fileLines.onClose(() -> System.out.println("\nHandler on fileLines"));
+			fileLines.forEach(element -> System.out.printf("%s\n", element));
 //			System.out.printf("Number of lines in the file: %d\n\n", fileLines.count());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

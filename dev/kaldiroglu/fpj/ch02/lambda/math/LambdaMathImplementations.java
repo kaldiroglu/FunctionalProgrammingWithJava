@@ -48,4 +48,5 @@ public static void main(String[] args) {
 		double outcome = math.calculate(arg1, arg2);
 		System.out.println(outcome);
 	}
+
 }

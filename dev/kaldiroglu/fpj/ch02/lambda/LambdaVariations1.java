@@ -63,9 +63,18 @@ public class LambdaVariations1 {
 		
 		Interface5 le50 = (d1, d2) -> d1 % d2;
 		System.out.println("Value: " + le50.f(1924, 25));
+
+		// That's problem
+		//LongOp longOp1 = (int x) -> (int) x; // Expected long but found int
+		LongOp longOp2 = (long x) -> (int) x;
+		LongOp longOp3 =  x -> (int) x;
+
+		// Automiatic widening
+		int n = 5;
+		int m = longOp3.apply(n);
+		System.out.println("m: " + m);
 	}
 }
-
 @FunctionalInterface
 interface Interface1 {
 	public void f();
@@ -87,3 +96,6 @@ interface Interface4 {
 interface Interface5 {
 	public double f(double d1, double d2);
 }
+
+@FunctionalInterface
+interface LongOp { int apply(long x); }

@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 public class StreamFromSources {
 
 	public static void main(String[] args) throws InterruptedException {
-//		produceStreams();
+		produceStreams();
 //		fromCollections();
 //		ofMethods();
 //		arraysMethods();
@@ -21,7 +21,7 @@ public class StreamFromSources {
 
 	public static void produceStreams() {
 		List<String> names = CollectionFactory.getNameList();
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 2; i++) {
 			Stream<String> sequentialStream = names.stream();
 			System.out.println("Sequental stream: " + sequentialStream);
 			Stream<String> parallelStream = sequentialStream.parallel();
