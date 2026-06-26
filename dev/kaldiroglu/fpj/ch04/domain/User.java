@@ -23,7 +23,7 @@ public class User {
         return active;
     }
 
-    public Optional<Address> getAddress() {        // Optional DÖNDÜRÜR (alan değil)
+    public Optional<Address> address() {        // Optional DÖNDÜRÜR (alan değil)
         return Optional.ofNullable(address);
     }
 

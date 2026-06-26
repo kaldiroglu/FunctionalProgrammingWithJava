@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
-public class StreamFromSources {
+public class StreamFromResources {
 
 	public static void main(String[] args) throws InterruptedException {
 		produceStreams();

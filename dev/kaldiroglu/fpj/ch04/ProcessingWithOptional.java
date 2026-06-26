@@ -43,13 +43,13 @@ public class ProcessingWithOptional {
         // 2) filter + flatMap + map + orElse  (tek if / get yok)
         String city = findUser("Ada")
                 .filter(User::isActive)
-                .flatMap(User::getAddress)    // Optional<Address>
+                .flatMap(User::address)    // Optional<Address>
                 .map(Address::city)
                 .orElse("—");
         System.out.println("Ada   -> " + city);         // İstanbul
 
         String city2 = findUser("Linus")
-                .flatMap(User::getAddress)    // boş
+                .flatMap(User::address)    // boş
                 .map(Address::city)
                 .orElse("—");
         System.out.println("Linus -> " + city2);        // —
@@ -71,7 +71,7 @@ public class ProcessingWithOptional {
 
         // 6) Optional.stream() — boşları eleyerek düzleştir
         List<String> cities = DB.stream()
-                .map(User::getAddress)        // Stream<Optional<Address>>
+                .map(User::address)        // Stream<Optional<Address>>
                 .flatMap(Optional::stream)    // boş olanlar elenir
                 .map(Address::city)
                 .toList();
