@@ -13,10 +13,10 @@ public class LazyStreamExample {
 	private static int counter;
 
 	public static void main(String[] args) {
-		 runExample1();
+//		 runExample1();
 //		 runExample2();
 //		 runExample3();
-//		runExample4();
+		runExample4();
 	}
 
 	public static void runExample1() {
@@ -25,8 +25,8 @@ public class LazyStreamExample {
 			System.out.println("Filtering: " + i);
 			return i % 2 == 0;
 		}).peek(i -> System.out.println("Post filtering: " + i));
-		System.out.println("Invoking terminal method count.");
-//		System.out.println("The count is " + stream.count());
+		System.out.println("*** Invoking terminal method count. ***");
+		System.out.println("The count is " + stream.count());
 	}
 
 	public static void runExample2() {
@@ -39,7 +39,8 @@ public class LazyStreamExample {
 				call();
 			return b;
 		});
-//		System.out.println("Counter: " + stream.count());
+		System.out.println("*** Invoking terminal method count. ***");
+		System.out.println("Counter: " + stream.count());
 		System.out.println("Counter: " + counter);
 	}
 
@@ -51,8 +52,8 @@ public class LazyStreamExample {
 			call();
 			return element.contains("2");
 		});
-
-//		stream.forEach(System.out::println);
+		System.out.println("*** Invoking terminal method count. ***");
+		stream.forEach(System.out::println);
 		list.stream().filter((s) -> s.endsWith("33")).forEach((s) -> System.out.println("Whats up?"));
 		System.out.println("Counter: " + counter);
 	}
