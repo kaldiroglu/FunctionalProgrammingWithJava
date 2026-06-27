@@ -6,8 +6,8 @@ import java.util.function.Function;
 public class FunctionComposition {
 
 	public static void main(String[] args) {
-		composition1();
-//		composition2();
+//		composition1();
+		composition2();
 	}
 
 	public static void composition1() {

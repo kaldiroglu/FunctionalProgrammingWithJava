@@ -6,8 +6,8 @@ import java.util.function.*;
 public class OperatorExample {
 
 	public static void main(String[] args) {
-		unaryOperatorExample();
-//		binaryOperatorExample();
+//		unaryOperatorExample();
+		binaryOperatorExample();
 	}
 
 	public static void unaryOperatorExample() {

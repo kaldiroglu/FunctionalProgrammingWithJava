@@ -58,7 +58,6 @@ public class MethodReferences {
 	}
 }
 
-
 // ---- Kendi fonksiyonel arayüzlerimiz ----
 
 @FunctionalInterface interface NowSource       { long now(); }                          // ~ Supplier<Long>

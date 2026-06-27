@@ -1,4 +1,4 @@
-package dev.kaldiroglu.fpj.ch07;
+package dev.kaldiroglu.fpj.ch10;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -11,7 +11,7 @@ public class ConsumerExample {
 		lowerCaseConverter.accept("ABCDefghijKlmnopQRSTuvWxyZ");
 
 		// Consumer example
-		BiConsumer<String, String> concat = (s1, s2) -> System.out.println(s1 + s2);
+		BiConsumer<String, String> concat = (s1, s2) -> System.out.println(s1 + " " + s2);
 		concat.accept("Mehmet", "Ünlü");
 	}
 }

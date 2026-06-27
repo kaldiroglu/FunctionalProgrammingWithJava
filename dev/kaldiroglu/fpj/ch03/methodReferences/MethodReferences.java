@@ -10,8 +10,8 @@ import java.util.function.*;
 
 public class MethodReferences {
 	public static void main(String[] args) {
-		examples();
-//		limitations();
+//		examples();
+		limitations();
 	}
 
 	public static void examples() {
