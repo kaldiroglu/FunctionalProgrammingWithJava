@@ -13,9 +13,9 @@ import java.util.stream.Stream;
 public class StreamFromResources {
 
 	public static void main(String[] args) throws InterruptedException {
-		produceStreams();
+//		produceStreams();
 //		fromCollections();
-//		ofMethods();
+		ofMethods();
 //		arraysMethods();
 	}
 

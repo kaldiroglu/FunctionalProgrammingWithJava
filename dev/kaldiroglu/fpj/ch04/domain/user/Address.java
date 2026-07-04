@@ -1,4 +1,4 @@
-package dev.kaldiroglu.fpj.ch04.domain;
+package dev.kaldiroglu.fpj.ch04.domain.user;
 
 public class Address {
 

@@ -11,8 +11,8 @@ public class StreamFromFile {
 	private static String path = "dev/kaldiroglu/fpj/ch06/source/FirstMemory.txt";
 
 	public static void main(String[] args) {
-//		streamOutOfFile();
-		streamWithHandlerOutOfFile();
+		streamOutOfFile();
+//		streamWithHandlerOutOfFile();
 	}
 
 	public static void streamOutOfFile() {

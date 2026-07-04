@@ -14,8 +14,8 @@ public class StreamAndIterator {
 		Iterator<String> iterator1 = names.iterator();
 		while (iterator1.hasNext()) {
 			String element = iterator1.next();
-			if(element.length() < 5)
-				System.out.println(iterator1.next());
+			if(element.length() > 5)
+				System.out.println(element);
 		}
 
 		System.out.println("\nIterating by ListIterator");
@@ -31,7 +31,7 @@ public class StreamAndIterator {
 		
 		System.out.println("\nIterating by Stream's iterator after filtering");
 		stream = names.stream();
-		Iterator<String> iterator2 = stream.filter(s -> s.length() < 5).iterator();
+		Iterator<String> iterator2 = stream.filter(s -> s.length() > 5).iterator();
 		while (iterator2.hasNext())
 			System.out.println(iterator2.next());
 		

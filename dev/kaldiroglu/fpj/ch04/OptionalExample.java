@@ -18,11 +18,15 @@ public class OptionalExample {
 		else
 			System.out.println("Nothing in there!");
 
+		System.out.println();
+
 		Optional<Integer> i = getInteger();
 		if (i.isPresent())
 			System.out.println(i.get());
 		else
-			System.out.println("Nothing in there!");
+			System.out.println("No integer in there!");
+
+		System.out.println();
 
 		// ifPresent()
 		i = getInteger();
@@ -58,6 +62,16 @@ public class OptionalExample {
 		stream.forEach((s) -> System.out.println("Stream: Value is " + s));
 	}
 
+	public static Integer getInteger0() {
+		Integer d = (int) Math.random();
+		if (d > 0.6)
+			d = d * 100;
+		else
+			d = null;
+
+		return d;
+	}
+
 	public static Optional<Integer> getInteger() {
 		Optional o;
 
@@ -68,6 +82,15 @@ public class OptionalExample {
 			o = Optional.ofNullable(null);
 
 		return o;
+	}
+
+	public static Integer getInteger2() {
+		double d = Math.random();
+		if (d > 0.6)
+			d = d * 100;
+		else
+			d = -1;
+		return (int) d;
 	}
 }
 

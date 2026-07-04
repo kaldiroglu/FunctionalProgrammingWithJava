@@ -1,6 +1,4 @@
-package dev.kaldiroglu.fpj.ch04.domain;
-
-import dev.kaldiroglu.fpj.ch04.ProcessingWithOptional;
+package dev.kaldiroglu.fpj.ch04.domain.user;
 
 import java.util.Optional;
 

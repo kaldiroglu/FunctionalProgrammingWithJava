@@ -16,7 +16,7 @@ public class StreamWithClosingHandler {
 		Stream<String> sequentialStreamWithHandler2 = sequentialStream
 				.onClose(() -> System.out.println("Handler on sequentialStreamWithHandler2"));
 		
-//		sequentialStream.close();
+		sequentialStream.close();
 //		sequentialStreamWithHandler1.close();
 //		sequentialStreamWithHandler2.close();
 

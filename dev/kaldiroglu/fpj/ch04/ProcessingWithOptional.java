@@ -1,7 +1,7 @@
 package dev.kaldiroglu.fpj.ch04;
 
-import dev.kaldiroglu.fpj.ch04.domain.Address;
-import dev.kaldiroglu.fpj.ch04.domain.User;
+import dev.kaldiroglu.fpj.ch04.domain.user.Address;
+import dev.kaldiroglu.fpj.ch04.domain.user.User;
 
 import java.util.List;
 import java.util.Optional;
