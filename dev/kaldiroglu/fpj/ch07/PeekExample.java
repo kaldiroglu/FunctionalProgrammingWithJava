@@ -9,7 +9,7 @@ import static dev.kaldiroglu.fpj.ch06.api.StreamUtil.print;
 public class PeekExample {
 
 	public static void main(String[] args) {
-		List<String> list = Stream.of("one", "two", "three", "four")
+		List<String> list = Stream.of("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
         .filter(e -> e.length() > 3)
         .peek(e -> System.out.println("Filtered value: " + e))
         .map(String::toUpperCase)

@@ -8,10 +8,10 @@ public class CollectionFactory {
 	ArrayList ls;
 	
 	private static List<String> nameList = Arrays.asList("Kemal", "Selim", "Cemalettin", "Ebru", "Zeynep",
-			"Harun", "Menekse", "Ahmet", "Mahmut", "Nazlı", "Selim", "Cemalettin", "Abdullah");
+			"Harun", "Menekse", "Ahmet", "Mahmut", "Nazlı", "Selim", "Cemalettin", "Abdullah", "Ali");
 	
-	private static List<String> duplicatedNameList = Arrays.asList("Zeynep", "Kemal", "Selim", "Cemalettin", "Ebru", "Zeynep",
-			"Harun", "Ebru", "Menekse", "Ahmet", "Ahmet", "Kemal");
+	private static List<String> duplicatedNameList = Arrays.asList("Ali", "Zeynep", "Kemal", "Selim", "Cemalettin", "Ebru", "Zeynep",
+			"Harun", "Ebru", "Menekse", "Ahmet", "Ahmet", "Kemal", "Ali");
 	
 	private static Set<String> nameSet;
 	

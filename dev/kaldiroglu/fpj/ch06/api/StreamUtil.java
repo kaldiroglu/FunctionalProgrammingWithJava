@@ -7,7 +7,7 @@ public class StreamUtil {
 
 	public static <T> void print(Stream<T> stream) {
 		System.out.println("Printing the stream");
-		stream.forEach(s -> System.out.println(s));
+		stream.forEach(System.out::println);
 		System.out.println();
 	}
 	
