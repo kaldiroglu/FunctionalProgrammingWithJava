@@ -16,7 +16,7 @@ public class SequentialAndParallelStreams {
 		System.out.println("Stream: " + sequentialStream1);
 		System.out.println("Is it parallel: " + sequentialStream1.isParallel());
 
-		Stream<String> parallelStream1 = names.parallelStream();
+		Stream<String> parallelStream1 = names.parallelStream(); // Collection's parallelStream()
 		System.out.println("Parallel stream: " + parallelStream1);
 		System.out.println("Is it parallel: " + parallelStream1.isParallel());
 

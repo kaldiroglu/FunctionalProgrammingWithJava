@@ -23,7 +23,7 @@ public class SequentialAndParallelStreams {
 
 		System.out.println();
 
-		Stream<String> sequentialStream2 = names.stream();
+		Stream<String> sequentialStream2 = names.stream(); // Collection's parallelStream()
 		System.out.println("Sequential Stream: " + sequentialStream2);
 
 		Stream<String> parallelStream2 = sequentialStream2.parallel();
