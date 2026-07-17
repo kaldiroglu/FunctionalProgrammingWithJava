@@ -22,5 +22,19 @@ public class DistinctExample {
 		Stream<String> stream2 = duplicatedNameList.stream();
 		stream2 = stream2.distinct();
 		print(stream2);
+
+		f();
+	}
+
+	static void f(){
+		List<String> duplicatedNameList = getDuplicatedNameList();
+		Stream<String> stream1 = duplicatedNameList.stream();
+		Stream stream2 = stream1.distinct();
+		print(stream2);
+
+//		stream1.filter(e -> true).forEach(System.out::println);
+		System.out.println(stream1);
+		System.out.println(stream2);
+
 	}
 }

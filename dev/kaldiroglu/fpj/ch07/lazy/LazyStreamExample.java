@@ -26,7 +26,7 @@ public class LazyStreamExample {
 			return i % 2 == 0;
 		}).peek(i -> System.out.println("Post filtering: " + i));
 		System.out.println("*** Invoking terminal method count. ***");
-		System.out.println("The count is " + stream.count());
+//		System.out.println("The count is " + stream.count());
 	}
 
 	public static void runExample2() {
@@ -40,7 +40,7 @@ public class LazyStreamExample {
 			return b;
 		});
 		System.out.println("*** Invoking terminal method count. ***");
-		System.out.println("Counter: " + stream.count());
+//		System.out.println("Counter: " + stream.count());
 		System.out.println("Counter: " + counter);
 	}
 
@@ -53,8 +53,8 @@ public class LazyStreamExample {
 			return element.contains("2");
 		});
 		System.out.println("*** Invoking terminal method count. ***");
-		stream.forEach(System.out::println);
-		list.stream().filter((s) -> s.endsWith("33")).forEach((s) -> System.out.println("Whats up?"));
+//		stream.forEach(System.out::println);
+//		list.stream().filter((s) -> s.endsWith("33")).forEach((s) -> System.out.println("Whats up?"));
 		System.out.println("Counter: " + counter);
 	}
 
@@ -63,6 +63,7 @@ public class LazyStreamExample {
 		int length = 3;
 		List<String> list = Stream.of("one", "two", "three", "four").peek(e -> {
 			System.out.println("Filtered value: " + e);
+			//counter++;
 			call();
 		}).filter(e -> e.length() > length).map(String::toUpperCase).peek(e -> System.out.println("Mapped value: " + e))
 				.collect(Collectors.toList());

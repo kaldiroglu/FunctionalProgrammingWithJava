@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static dev.kaldiroglu.fpj.ch06.api.StreamUtil.print;
+
 /**
  * flatMap() örneği.
  *
@@ -25,11 +27,13 @@ public class FlatMapExample {
 		nested.stream()
 				.flatMap(List::stream)        // Stream<List<Integer>> -> Stream<Integer>
 				.forEach(n -> System.out.print(n + " "));   // 1 2 3 4 5 6
-		System.out.println();
+
+		System.out.println("\n");
 
 		// map() ile YAPILAMAZ: aşağıdaki satır Stream<Stream<Integer>> üretirdi,
 		// yani iç içe akış; düzleştirme olmazdı:
-		// Stream<Stream<Integer>> wrong = nested.stream().map(List::stream);
+		Stream<Stream<Integer>> wrongStream = nested.stream().map(List::stream);
+		print(wrongStream);
 
 		// 2) Cümleleri kelimelere ayırma
 		System.out.println("\nCümleleri kelimelere ayırma:");

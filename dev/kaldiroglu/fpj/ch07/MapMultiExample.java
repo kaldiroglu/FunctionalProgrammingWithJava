@@ -19,7 +19,7 @@ public class MapMultiExample {
 
 		// 1) Her elemanı kendisi ve 10 katına genişlet (bire-iki)
 		System.out.println("Her sayıyı kendisi ve 10 katına genişletme:");
-		Stream.of(1, 2, 3)
+		Stream.of(1, 2, 3, 4)
 				.<Integer>mapMulti((n, downstream) -> {
 					downstream.accept(n);
 					downstream.accept(n * 10);
@@ -39,7 +39,7 @@ public class MapMultiExample {
 
 		// 3) İlkel akışa: mapMultiToInt (downstream bir IntConsumer'dır)
 		System.out.println("\nmapMultiToInt ile metni sayılara ayırma:");
-		Stream.of("1,2", "3,4,5")
+		Stream.of("1, 2", "3, 4, 5")
 				.mapMultiToInt((s, intConsumer) -> {
 					for (String part : s.split(","))
 						intConsumer.accept(Integer.parseInt(part));
