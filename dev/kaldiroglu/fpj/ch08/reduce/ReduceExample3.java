@@ -10,7 +10,7 @@ import static dev.kaldiroglu.fpj.ch06.domain.CollectionFactory.getNameList;
 public class ReduceExample3 {
 	public static void main(String[] args) {
 //		runExamples();
-//		 runNamesExamples();
+		 runNamesExamples();
 	}
 
 	public static void runExamples() {

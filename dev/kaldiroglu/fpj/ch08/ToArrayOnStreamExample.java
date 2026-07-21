@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.function.IntFunction;
 
 import static dev.kaldiroglu.fpj.ch05.domain.BookFactory.getBookList;
+import static dev.kaldiroglu.fpj.ch06.api.StreamUtil.print;
 import static dev.kaldiroglu.fpj.ch06.domain.CollectionFactory.getNameList;
 import dev.kaldiroglu.fpj.ch05.domain.Book;
 
@@ -12,6 +13,8 @@ public class ToArrayOnStreamExample {
 
 		System.out.println("\n--- New array ---");
 		List<String> nameList = getNameList();
+		print(nameList);
+		System.out.println("-----------");
 		Object[] names = nameList.stream().toArray();
 		for (Object o : names)
 			System.out.println(o);

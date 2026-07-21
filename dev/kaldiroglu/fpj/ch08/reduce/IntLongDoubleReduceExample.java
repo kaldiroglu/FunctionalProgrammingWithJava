@@ -76,8 +76,12 @@ public class IntLongDoubleReduceExample {
 		System.out.println();
 
 		stream = generateLongStream();
-		long sum = stream.sum();
-		System.out.println("Sum of longs: " + sum);
+		long sum1 = stream.sum();
+		System.out.println("Sum of longs: " + sum1 + "\n");
+
+		stream = generateLongStream();
+		long sum2 = stream.reduce(0L, Long::sum);
+		System.out.println("Sum of longs: " + sum2 + "\n");
 
 		stream = generateLongStream();
 		stream = stream.peek((l) -> System.out.print(l + " "));

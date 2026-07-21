@@ -22,11 +22,11 @@ public class ToListExample {
 		System.out.println("toList(): " + upper);              // [ADA, LINUS, GRACE]
 
 		// 2) toList() DEĞİŞTİRİLEMEZ bir liste döndürür
-		try {
+//		try {
 			upper.add("KEN");
-		} catch (UnsupportedOperationException e) {
-			System.out.println("  -> değiştirilemez: " + e.getClass().getSimpleName());
-		}
+//		} catch (UnsupportedOperationException e) {
+//			System.out.println("  -> değiştirilemez: " + e.getClass().getSimpleName());
+//		}
 
 		// 3) collect(Collectors.toList()) ise DEĞİŞTİRİLEBİLİR bir liste döndürür
 		List<String> modifiable = Stream.of("ada", "linus", "grace")

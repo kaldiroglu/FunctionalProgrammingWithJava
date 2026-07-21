@@ -15,6 +15,7 @@ public class CollectorExample1 {
 	public static void runNameJoiner() {
 		System.out.println("Name joiner 1");
 		Stream<String> nameStream = generateNameStream();
+
 		Supplier<StringJoiner> joiner = () -> new StringJoiner(" | ");
 		BiConsumer<StringJoiner, String> accumulator = (j, s) -> j.add(s.toUpperCase());
 		BinaryOperator<StringJoiner> combiner = (j1, j2) -> j1.merge(j2);
@@ -22,9 +23,10 @@ public class CollectorExample1 {
 		Collector<String, StringJoiner, String> nameCollector = Collector.of(joiner, // supplier
 				accumulator, // accumulator
 				combiner, // combiner
-				StringJoiner::toString); // finisher
+				finisher); // finisher
 
-		String names = nameStream.collect(nameCollector);
+//		String names = nameStream.collect(nameCollector);
+		String names = nameStream.parallel().collect(nameCollector);
 		System.out.println(names);
 
 		System.out.println("\nName joiner 2");
@@ -57,6 +59,7 @@ public class CollectorExample1 {
 		// This is how it works.
 		System.out.println("\nName length adder, this is how it works.");
 		Stream<String> nameStream = generateNameStream();
+
 		Supplier<Sum> supplier = () -> {
 			System.err.println("Thread name: " + Thread.currentThread().getName());
 			Sum sumObject = new Sum();

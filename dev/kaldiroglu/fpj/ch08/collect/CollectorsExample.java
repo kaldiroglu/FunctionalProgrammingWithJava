@@ -40,7 +40,7 @@ public class CollectorsExample {
 
 		System.out.println("\nBooks page statistics");
 		Stream<String> nameStream = generateNameStream();
-		String joinedString = nameStream.collect(Collectors.joining(" | "));
+		String joinedString = nameStream.collect(Collectors.joining(" *** "));
 		System.out.println(joinedString);
 		
 		System.out.println("\nGrouping books");

@@ -78,7 +78,7 @@ public class OtherTerminalsExample {
 
 		System.out.println();
 		
-		Stream<String> s6 = Stream.of("one", "two", "three", "four");
+		Stream<String> s6 = Stream.of("zero", "one", "two", "three", "four");
 		Optional<String> opt2 = s6.findFirst();
 		if (opt2.isPresent()) {
 			System.out.println(opt2.get());
@@ -94,14 +94,14 @@ public class OtherTerminalsExample {
 
 		System.out.println();
 		
-		Stream<String> s8 = Stream.of("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten");
+		Stream<String> s8 = Stream.of("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve");
 		Optional<String> opt4 = s8.parallel().findAny();
 		if (opt4.isPresent()) {
 			System.out.println("Parallel findAny: " + opt4.get());
 
 			Arrays.asList("red", "green", "blue").stream().sorted().findFirst().ifPresent(System.out::println);
 
-			Arrays.asList("red", "yellow", "aaa", "blue").stream().sorted().findFirst()
+			Arrays.asList("red", "yellow", "aaa", "blue").stream().parallel().sorted().findFirst()
 					.ifPresent(System.out::println);
 		}
 	}

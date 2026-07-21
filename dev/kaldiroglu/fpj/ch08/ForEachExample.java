@@ -12,7 +12,7 @@ import dev.kaldiroglu.fpj.ch05.domain.Book;
 public class ForEachExample {
 
 	public static void main(String[] args) {
-//		runNamesExamples();
+		runNamesExamples();
 		runBooksExamples();
 	}
 	
@@ -30,6 +30,7 @@ public class ForEachExample {
 		
 		stream = nameList.stream();
 		stream.forEach(printLengthConsumer);
+		//stream.forEach(printLengthConsumer); // java.lang.IllegalStateException: stream has already been operated upon or closed
 	}
 
 	public static void runBooksExamples() {

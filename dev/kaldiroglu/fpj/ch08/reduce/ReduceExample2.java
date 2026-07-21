@@ -18,7 +18,8 @@ import dev.kaldiroglu.fpj.ch05.domain.Book;
 public class ReduceExample2 {
 
 	public static void main(String[] args) {
-//		runExamples();
+		System.out.println("Available processors: " + Runtime.getRuntime().availableProcessors());
+		runExamples();
 //		 runNamesExample();
 //		 runNamesMechanism();
 //		 runBooksExamples();
@@ -35,8 +36,8 @@ public class ReduceExample2 {
 			System.out.println("integer: " + integer + " s: " + s);
 			return Integer.sum(integer, Integer.parseInt(s));
 		};
-		int result = Stream.of("0", "1", "2", "3").parallel().reduce(0, intConverter, combiner);
-//		int result = Stream.of("0", "1", "2", "3", "4", "5", "6", "7").parallel().reduce(0, intConverter, combiner);
+//		int result = Stream.of("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18").reduce(0, intConverter, combiner);
+		int result = Stream.of("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18").parallel().reduce(0, intConverter, combiner);
 		System.out.println(result);
 
 		// This is the same thing

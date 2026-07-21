@@ -14,8 +14,8 @@ import static dev.kaldiroglu.fpj.ch06.domain.CollectionFactory.getNameList;
 public class ReduceExample1 {
 
 	public static void main(String[] args) {
-//		runExamples();
-		runNamesExamples();
+		runExamples();
+//		runNamesExamples();
 //		runBooksExamples();
 	}
 	
@@ -24,17 +24,17 @@ public class ReduceExample1 {
 //		System.out.println(sum);
 		BinaryOperator<Integer> bo = (i, j) -> {System.out.print("i: " + i + " j: " + j); int sum = i + j; System.out.println(" Sum: " + sum); return sum;};
 		int sum = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9).reduce(0, bo);
-		System.out.println(sum);
+		System.out.println(sum + "\n");
 		
 		sum = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9).reduce(0, Integer::sum);
-		System.out.println(sum);
+		System.out.println(sum + "\n");
 		
 		int product = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9).reduce(1, (i, j) -> i * j);
-		System.out.println(product);
+		System.out.println(product + "\n");
 		
 		BinaryOperator<Double> averageOperator = (i, j) -> i + j / 9;
 		double average = Stream.of(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0).reduce(0.0, averageOperator);
-		System.out.println(average);
+		System.out.println(average + "\n");
 	}
 
 	public static void runNamesExamples() {
